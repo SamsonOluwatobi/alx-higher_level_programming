@@ -92,7 +92,7 @@ class SinglyLinkedList:
         """Initializes a new SinglyLinkedList instance with an empty head."""
         self.head = None
 
-    def sorted_insert(self, value):
+    def sortedinsert(self, value):
         """Inserts a new node with the given value in the linked list
         in sorted order.
 
