@@ -1,4 +1,22 @@
 #!/usr/bin/python3
+
+"""This module defines a Square class with a size and position field.
+
+The Square class has methods to compute the area of the square,
+print the square using the character '#' in the standard output,
+and check if a value can be a position by checking if it is a
+tuple of exactly two positive integers.
+
+Example:
+    s = Square(3, (1, 2))
+    s.my_print()
+
+Attributes:
+    size (int): The size of every side of the square.
+    position (tuple): The position of the square in the X and Y axis.
+"""
+
+
 class Square:
     """Simple square class with his size as a field"""
 

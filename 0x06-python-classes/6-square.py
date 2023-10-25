@@ -19,8 +19,15 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """An object constructor method."""
-        self.__size = size
-        self.__position = position
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        elif not self.__is_a_valid_position(position):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__size = size
+            self.__position = position
 
     @property
     def size(self):
@@ -58,14 +65,10 @@ class Square:
         Arg:
             value: the value to be set
         """
-        if (
-            not isinstance(value, tuple)
-            or len(value) != 2
-            or not all(isinstance(num, int) for num in value)
-            or not all(num >= 0 for num in value)
-        ):
+        if self.__is_a_valid_position(value):
+            self.__position = value
+        else:
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
 
     def area(self):
         """A public object method.
@@ -76,12 +79,30 @@ class Square:
 
     def my_print(self):
         """Displays the square object with # character"""
-        if self.__size == 0:
-            print("")
-            return
+        if not self.size:
+            print()
+        else:
+            for spaces_Y in range(self.position[1]):
+                print()
+            for row in range(self.size):
+                for spaces_X in range(self.position[0]):
+                    print(" ", end="")
+                for row in range(self.size):
+                    print("#", end="")
+                print()
 
-        [print("") for i in range(0, self.__position[1])]
-        for i in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
-            [print("#", end="") for k in range(0, self.__size)]
-            print("")
+    def __is_a_valid_position(self, positions):
+        """ Check if a value can be a position by checking
+            if @positions is a tuple of exactly two positive integers
+            Return:
+                    True if @positions is a valid position field
+                    False otherwise"""
+        if type(positions) is tuple\
+                and len(positions) == 2\
+                and type(positions[0]) is int\
+                and type(positions[1]) is int\
+                and positions[0] >= 0\
+                and positions[1] >= 0:
+            return True
+        else:
+            return False

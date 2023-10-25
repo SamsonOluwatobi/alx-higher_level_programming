@@ -1,4 +1,28 @@
 #!/usr/bin/python3
+
+"""This module defines a Square class with a size attribute and
+methods to compute the area and compare two Square instances.
+
+The Square class has a private attribute __size and methods to
+compute the area of the square and compare two Square instances.
+The class has a constructor that initializes the __size attribute
+with a given value, and getter and setter methods for the __size attribute.
+
+The class also defines several dunder methods to compare two Square
+instances, including __eq__, __ne__, __lt__, __gt__, __le__, and __ge__.
+
+Example:
+    s1 = Square(3)
+    s2 = Square(4)
+    print(s1.area())
+    print(s1 > s2)
+
+Classes:
+    Square: A class that defines a square with a size attribute
+    and methods to compute the area and compare two Square instances.
+"""
+
+
 class Square:
     """Simple square class with his size as a field"""
 

@@ -1,4 +1,39 @@
+#!/usr/bin/python3
+
+"""This module defines a MagicClass that represents a circle and
+provides methods to compute its area and circumference.
+
+The MagicClass has a private attribute __radius that must be a number,
+and two methods:
+- area(self): Computes the area of the circle.
+- circumference(self): Computes the circumference of the circle.
+
+Example:
+    mc = MagicClass(3)
+    print(mc.area())
+    print(mc.circumference())
+
+Classes:
+    MagicClass: A class that represents a circle and provides
+    methods to compute its area and circumference.
+"""
+
+
 import math
+
+"""
+    A class that represents a circle and provides methods to compute
+    its area and circumference.
+
+    Attributes:
+        __radius (int or float): The radius of the circle. Must be a number.
+
+    Methods:
+        __init__(self, radius=0): Initializes a new MagicClass instance
+        with the given radius.
+        area(self): Computes the area of the circle.
+        circumference(self): Computes the circumference of the circle.
+"""
 
 
 class MagicClass:
