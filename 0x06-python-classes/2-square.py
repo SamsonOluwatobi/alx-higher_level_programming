@@ -3,10 +3,12 @@ class Square:
     """A simple class to represent a square.
 
     Attributes:
-        __size (int): The size of every side of the square. Must be a positive integer value.
+        __size (int): The size of every side of the square.
+        Must be a positive integer value.
 
     Methods:
-        __init__(self, size): Initializes a new Square instance with the given size.
+        __init__(self, size): Initializes a new Square
+        instance with the given size.
     """
 
     def __init__(self, size=0):

@@ -3,10 +3,12 @@ class Square:
     """A simple class to represent a square.
 
     Attributes:
-        size (int): The size of every side of the square. Must be a positive integer value.
+        size (int): The size of every side of the square.
+        Must be a positive integer value.
 
     Methods:
-        area(): Computes the area of the square with the formula: area = size ** 2.
+        area(): Computes the area of the square with the formula:
+        area = size ** 2.
     """
 
     def __init__(self, size=0):
@@ -21,4 +23,3 @@ class Square:
     def area(self):
         """Computes the area of the square."""
         return (self.__size ** 2)
-    
