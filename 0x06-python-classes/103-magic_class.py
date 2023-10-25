@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import math
 
 """This module defines a MagicClass that represents a circle and
 provides methods to compute its area and circumference.
