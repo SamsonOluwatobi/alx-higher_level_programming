@@ -8,9 +8,9 @@
     - Method to double the dimensions of the Rectangle (multiplies by 2).
 */
 
-const Base_square = require('./5-square');
+const Basesquare = require('./5-square');
 
-class Square extends Base_square {
+class Square extends Basesquare {
   charPrint (c) {
     const char = c === undefined ? 'X' : c;
     for (let i = 0; i < this.height; i++) {
