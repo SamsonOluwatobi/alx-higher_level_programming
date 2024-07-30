@@ -20,4 +20,3 @@ const handler = (err, data) => {
 
 // Read the file and pass the handler function to be called when done.
 readFile(filePath, 'utf8', handler);
-

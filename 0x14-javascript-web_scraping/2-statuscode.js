@@ -17,4 +17,3 @@ const handler = (error, response) => {
 
 // Send a GET request to the URL and pass the handler function as the callback
 get(url, handler);
-

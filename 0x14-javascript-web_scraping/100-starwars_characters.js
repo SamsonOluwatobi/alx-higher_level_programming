@@ -35,4 +35,3 @@ const filmHandler = (error, response, body) => {
 
 // Send a GET request to the URL and pass the filmHandler function as the callback
 get(url, filmHandler);
-

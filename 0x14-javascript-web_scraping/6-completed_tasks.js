@@ -36,4 +36,3 @@ const handler = (error, response, body) => {
 };
 
 get(url, handler);
-

@@ -24,4 +24,3 @@ const handler = error => {
 
 // Write the string to the file with UTF-8 encoding and call the handler function
 writeFile(filePath, writeData, 'utf8', handler);
-

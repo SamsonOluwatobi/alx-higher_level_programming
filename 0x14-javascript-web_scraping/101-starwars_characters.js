@@ -41,4 +41,3 @@ const filmHandler = async (error, response, body) => {
   }
 };
 get(url, filmHandler);
-

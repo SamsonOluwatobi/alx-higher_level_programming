@@ -32,4 +32,3 @@ const requestHandler = (error, response, body) => {
 // Send an HTTP GET request to the URL and pass the requestHandler function
 // as the callback to handle the response
 get(url, requestHandler);
-
