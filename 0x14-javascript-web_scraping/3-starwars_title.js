@@ -10,17 +10,19 @@
  * The title of the movie is logged to the console.
  */
 
-const movieId = process.argv[2];
-const url = `http://swapi.co/api/films/${movieId}`;
-const { get } = require('request');
+const movieId = process.argv[2]
+
+const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`
+const { get } = require('request')
+
 const handler = (error, response, body) => {
   if (!error && response.statusCode === 200) {
     if (typeof body === 'string') {
-      body = JSON.parse(body);
+      body = JSON.parse(body)
     }
-    console.log(body.title);
+    console.log(body.title)
   }
-};
+}
 
-get(url, handler);
+get(url, handler)
 
